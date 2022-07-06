@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+body {
+  @apply text-gray-800;
+  @apply h-screen flex justify-center items-center gap-4;
+}
+
+.todo-app {
+  @apply w-96 bg-gray-200 rounded-md;
+  @apply flex flex-col overflow-hidden;
+}
+
+.todo-header {
+  @apply flex justify-between items-center gap-4 p-4;
+}
+
+.todo-header label {
+  @apply w-full py-2;
+}
+
+.todo-header input {
+  @apply w-full rounded-md p-2;
+}
+
+.todo-header button {
+  @apply flex-shrink-0 px-4 py-2;
+  @apply transition-colors duration-300 ease-in-out;
+  @apply bg-slate-300 hover:bg-slate-400 rounded-md;
+}
+
+.todo-list {
+  @apply grid grid-cols-1;
+}
+
+.todo-item {
+  @apply px-4 py-2 bg-slate-300 hover:bg-slate-400;
+  @apply flex justify-between items-center gap-2;
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.todo-item label {
+  @apply cursor-pointer;
+}
+
+.todo-item input[type=text] {
+  @apply bg-transparent outline-none;
+}
+
+.todo-body {
+  @apply flex justify-start items-center gap-2;
+  @apply w-full;
+}
+
+.remove-button {
+  @apply shrink-0;
+}
